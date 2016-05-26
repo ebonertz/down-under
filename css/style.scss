@@ -1,0 +1,322 @@
+html, body {
+ margin: 0;
+ padding: 0;
+ font-family: 'Roboto', sans-serif;
+ width:100%;
+}
+
+.header-nav{
+    align-items: baseline;
+    width: 100%;
+    border-radius: 2px;
+    padding-bottom: 2em;
+    background-color: green;
+    margin-top: -2em;
+
+        h1 {
+            color: orange;
+        }
+}
+
+.container {
+    width: 100%;
+    border: 1px solid black;
+}
+
+
+.left-nav {
+padding: .5em;
+font-size: 1.8em;
+margin-left: 5%;
+max-width: 300px;
+text-align: left;
+}
+
+.right-nav {
+    display: flex;
+    justify-content: flex-end;
+    float: right;
+    padding: 1px;
+    margin-right: 5%;
+    font-size: 1em;
+    margin-top: -55px;
+    a{
+        text-decoration: none;
+        color:orange;
+        font-size: 1.5em;
+    }
+    a:visited {
+        text-decoration: none;
+        color:#fff;
+        text-decoration: none;
+
+    }
+    a:hover {
+        text-decoration: none;
+        color: #428bca;
+    }
+}
+
+.header-title h1:hover {
+    text-decoration: none;
+}
+
+img {
+    max-width: 500px;
+}
+
+.col-md-6 {
+    display: flex;
+    text-align: center;
+}
+
+
+.footer-container h1 {
+    text-align: center;
+    margin-left: 5%;
+    border: 1px solid red;
+}
+
+.main {
+ background-color: #fff ;
+ padding: 40px 0;
+ .cart-container {}
+}
+
+.main h1 {
+ color: orange ;
+ font-size: 64px;
+ margin: 0 0 80px 0;
+ padding: 5px 0;
+   line-height: 50px;
+   width: 50%;
+   margin-left: 20%;
+}
+
+.main h2 {
+ background-color: #DDDDDD ;
+ color: #999999 ;
+ font-size: 20px;
+ margin: 0 0 40px 0;
+ padding: {
+     top: 30px;
+     bottom: 30px;
+     left: 5px;
+     right: 5px;
+ }
+
+h3 {
+    font-size: .5em;
+}
+
+.header-title {
+    text-align: center;
+}
+
+.header-title a {
+    float: left;
+}
+
+p {
+    color: black;
+    font-size: 1.5em;
+    padding: {
+             top: 0px;
+             bottom: 5px;
+             left: 5px;
+             right: 5px;
+         }
+
+}
+}
+
+.order-details {
+    display: inline;
+    font-size: 3em;
+}
+
+// styling for the product thumbnails on the storefront
+
+.thumbnail {
+ position: relative;
+ padding: 50px;
+   margin-bottom:50px;
+   text-align: center;
+    p {
+        font-size: 1.5em;
+    }
+}
+
+.fa-cart-plus{
+  float:right;
+}
+
+.fa-times:hover {
+    color: orange;
+}
+
+.thumbnail img {
+   margin-top: 10px;
+ margin-bottom: 30px;
+ max-width: 100%;
+}
+
+.title,
+.date {
+ color: #444;
+ margin: 0;
+ font-size: 18px;
+   font-weight: 800;
+}
+
+.date {
+   color: #a3a3a3 ;
+   font-size: 14px;
+   font-weight: 200;
+}
+
+.price {
+ background-color: #39D1B4 ;
+ color: #fff;
+ font-size: 15px;
+   border-radius: 50%;
+   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+   font-weight: 200;
+   height: 80px;
+   line-height: 80px;
+   text-align: center;
+   width: 80px;
+ position: absolute;
+ top: 100px;
+ right: 20px;
+}
+
+.fa-cart-plus {
+    margin-right: 30px;
+    margin-bottom: 15px;
+}
+
+.fa-times {
+    padding-right: 55px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+}
+
+.details-container {
+    text-align: center;
+    max-width: 900px;
+    }
+
+.details-list {
+    font-size: 1.5em;
+    margin-left: 5
+}
+
+
+
+
+// .price:hover {
+//     font-size: 18px;
+//     background-color: darken(#39d1B4, 20%);
+//     cursor: auto;
+// }
+
+//styling for the cart page
+
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    min-width: 500px;
+}
+
+.cart-item {
+    background: #fff;
+}
+
+.cart-price {
+    margin-right: 50px;
+}
+
+.ticket-counter {
+    float: right;
+    margin-bottom: 55px;
+    margin-right: 50px;
+
+}
+
+.total-container {
+    float: right;
+    margin-right: 20px;
+    display: flex;
+    align-content: flex-start;
+    padding: 1em;
+}
+
+#orderTotal h2{
+    float: right;
+}
+
+// this is the 'remove from cart' icon
+.fa-times {
+  float: left;
+  margin-top: -12px;
+}
+
+.cartItemDetail {
+  display: inline-block;
+}
+
+.cart-name {
+  margin-left: 10px;
+}
+
+.cart-price {
+  float: right;
+}
+
+.rating {
+ text-align: right;
+ -webkit-user-select: none;
+    -moz-user-select: none;
+     -ms-user-select: none;
+ margin: 30px 0 -30px 20px;
+}
+
+.likes,
+.dislikes {
+   background: #F65A5B ;
+ color: #fff;
+ cursor: pointer;
+ display: inline-block;
+ font-size: 15px;
+   line-height: 40px;
+   min-width: 40px;
+   height: 40px;
+   border-radius: 50%;
+ margin: 0 -30px 0 40px;
+   text-align: center;
+   font-weight: 200;
+   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+   transition: background 500ms;
+}
+
+.likes:hover,
+.dislikes:hover {
+ color: #F65A5B ;
+   background: rgba(246, 90, 91, 0.25);
+   transition: background 500ms;
+}
+
+.footer {
+ text-align: center;
+ margin: 50px 0 80px;
+}
+
+.footer h2 {
+ font-size: 24px;
+ margin-bottom: 25px;
+}
+
+.footer img {
+   margin: 0 10px;
+}
