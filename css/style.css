@@ -12,37 +12,17 @@ html, body {
   background-color: green;
   margin-top: -2em; }
   .header-nav h1 {
-    color: orange; }
+    color: gold;
+    text-align: center; }
 
 .container {
   width: 100%; }
 
 .left-nav {
-  padding: .5em;
+  padding: .8em;
   font-size: 1.8em;
-  margin-left: 5%;
-  max-width: 300px;
-  text-align: left; }
-
-.right-nav {
-  display: flex;
-  justify-content: flex-end;
-  float: right;
-  padding: 1px;
-  margin-right: 5%;
-  font-size: 1em;
-  margin-top: -55px; }
-  .right-nav a {
-    text-decoration: none;
-    color: orange;
-    font-size: 1.5em; }
-  .right-nav a:visited {
-    text-decoration: none;
-    color: #fff;
-    text-decoration: none; }
-  .right-nav a:hover {
-    text-decoration: none;
-    color: #428bca; }
+  width: 100%;
+  text-align: center; }
 
 .header-title h1:hover {
   text-decoration: none; }
@@ -105,12 +85,6 @@ img {
   text-align: center; }
   .thumbnail p {
     font-size: 1.5em; }
-
-.fa-cart-plus {
-  float: right; }
-
-.fa-times:hover {
-  color: orange; }
 
 .thumbnail img {
   margin-top: 10px;
@@ -199,13 +173,6 @@ img {
 
 .cart-price {
   float: right; }
-
-.rating {
-  text-align: right;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  margin: 30px 0 -30px 20px; }
 
 .likes,
 .dislikes {
