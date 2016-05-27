@@ -1,20 +1,25 @@
 //Write a controller with and HTTP Request to the commerce tools platform
 
 var projectKey = "down-under";
-var token = "0BkAlJGKXOxEtMq2nnPctPFTl1EtKPlG";
+var token = "aFgroaXhmKXnrv8Zgc-78CaGey0dHqlk";
 var baseUrl = "https://api.sphere.io/${projectKey}";
 var tokenHeader = "Authorization: Bearer ${token}";
 
 
 DownUnder.controller('MainController', ['$http', '$scope', function($http, $scope) {
 
-  console.log('MainController ran');
-  $http.get(tokenHeader + "https://api.sphere.io/down-under/products/").then(function JSON_CALLBACK(response){
-    $scope.products = response.data;
-    console.log(data);
-  });
+          console.log('MainController ran');
+          $http.get('https://api.sphere.io/down-under/products?token=',
+          {headers: { Authorization: 'Bearer aFgroaXhmKXnrv8Zgc-78CaGey0dHqlk'}})
+          .then(function successCallback(response){
+            $scope.products = response.data;
+            console.log(response);
+            console.log(products.data);
+
+          });
     }]);
 
+//last attemp {headers: {token }}
 
 // THIS IS THE CONTROLLER for a specific product
 // DownUnder.controller('DetailsController', ['$http', '$scope', function($http, $scope) {
@@ -33,12 +38,8 @@ DownUnder.controller('MainController', ['$http', '$scope', function($http, $scop
 // Add some more products
 // Create a new view for Product Details page
 // Test and validate HTTP request from sphere
-// Install Docker for dependencies?
-// Determine if OAuth is neccesary for this process
 // Authentication and Access Keys
-// Visit Iron Yard to get some help?
 // We maintain a Git repository of code samples of how to authenticate to our API in various languages - Link on the HTTP Autho page
-//Provide client ID and client secret
 
 // POST https://{host}/oauth/token?grant_type=client_credentials&scope={scope}
 // Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==
