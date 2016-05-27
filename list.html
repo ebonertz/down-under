@@ -5,7 +5,7 @@
         <h1>Down Under</h1>
       </div>
       <div class="right-nav">
-        <a href="#/cart">Cart</a>
+        <a href="#">Cart</a>
       </div>
     </div>
   </nav>
@@ -17,14 +17,15 @@
       <li ng-repeat="product in products" class="thumbnail">
         <h2>
           <a href="#/details">{{product.masterData.current.name.en}} </a>
-          <a ng-href="#/cart">
+          <a ng-href="#">
             <span class="storefrontID" hidden=true>{{ }}</span>
             <i ng-click="addToCart()" class="fa fa-cart-plus fa-2x"></i>
           </a>
         </h2>
         <p class="location">Description: {{product.masterData.current.description.en}} </p>
         <p class="item-price"> Price: {{product.masterData.current.masterVariant.prices}} </p>
-        <p class="item-image"> Image: {{product.masterData.current.masterVariant.images}} </p>
+        <p class="item-image"> Image: <img src="{{product.masterData.current.masterVariant.images}}" height="220" width="220"></p>
+
         <!-- <p class="price"> {{product.masterData.current.masterVariant.prices.value.centAmount | currency:"$"}}</p> -->
       </li>
 </ul>
