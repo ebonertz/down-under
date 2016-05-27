@@ -7,21 +7,23 @@ var tokenHeader = "Authorization: Bearer ${token}";
 
 
 DownUnder.controller('MainController', ['$http', '$scope', function($http, $scope) {
+        var store = this;
+
 
           console.log('MainController ran');
           $http.get('https://api.sphere.io/down-under/products?token=',
           {headers: { Authorization: 'Bearer aFgroaXhmKXnrv8Zgc-78CaGey0dHqlk'}})
           .then(function successCallback(response){
-            $scope.products = response.data;
+            $scope.products = response.data.results;
             console.log(response);
-            console.log(products.data);
+            console.log($scope.products);
 
           });
     }]);
 
 //last attemp {headers: {token }}
 
-// THIS IS THE CONTROLLER for a specific product
+// THIS IS THE CONTROLLER for a specific product details
 // DownUnder.controller('DetailsController', ['$http', '$scope', function($http, $scope) {
 //
 //     $http.get('sample.json').success(function(data){
@@ -30,23 +32,6 @@ DownUnder.controller('MainController', ['$http', '$scope', function($http, $scop
 //     });
 //  }]);
 
-
-
-// Reference Sweet Event Store and controller
-// Research the SDK options with PHP and node.js
+//Parse data and use ng-repeat to display to the page
 // Test deployment of app to Heroku and get direct link
-// Add some more products
 // Create a new view for Product Details page
-// Test and validate HTTP request from sphere
-// Authentication and Access Keys
-// We maintain a Git repository of code samples of how to authenticate to our API in various languages - Link on the HTTP Autho page
-
-// POST https://{host}/oauth/token?grant_type=client_credentials&scope={scope}
-// Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==
-
-// Example Request
-// $ curl https://auth.sphere.io/oauth/token -X POST \
-// 	-H "Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==" \
-// 	-d "grant_type=client_credentials&scope=manage_project:{projectKey}"
-
-//
