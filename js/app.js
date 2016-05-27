@@ -6,10 +6,6 @@ DownUnder.config(function($routeProvider) {
       templateUrl: 'list.html',
       controller: 'MainController'
     })
-    .when('/cart', {
-      templateUrl: 'admin.html',
-      controller: 'CartController'
-    })
     .when('/details', {
       templateUrl: 'details.html',
       controller: 'DetailsController'
