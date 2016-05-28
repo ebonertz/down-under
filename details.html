@@ -9,13 +9,12 @@
   <div class="main" ng-controller="DetailsController">
     <div>
         <div class="details container">
-                  <h2 class="details-name"> {{product.masterData.current.name.en}}</h2>
+                  <h2 class="details-name"> {{products.masterData.current.name.en}}</h2>
             <!-- </div> -->
             <div class="details-list">
-                <p class="item-price"> Price: {{product.masterData.current.masterVariant.value }} </p>
-                <p class="item-image"> Image: <img ng-src="{{product.masterData.current.masterVariant.images.url}}" height="220" width="220"></p>
-                <p class="description"> {{product.description}}</p>
-                <p class="details-price">{{product.price}}</p>
+                <p class="description"> Description: {{products.masterData.current.description.en}}</p>
+                <p class="item-price"> Price: {{products.masterData.current.masterVariant.prices[0].value.centAmount | currency: "€" : -2 }} </p>
+                <p class="item-image"> Image: <img ng-src="{{products.masterData.current.masterVariant.images[0].url}}" height="220" width="220"></p>
             </div>
         </div>
     </div>

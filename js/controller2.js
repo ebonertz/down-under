@@ -8,10 +8,10 @@ DownUnder.controller('DetailsController', ['$http', '$scope', function($http, $s
           console.log('DetailsController ran');
           var productID = localStorage.getItem('ID');
 
-          $http.get('https://api.sphere.io/down-under/products/?token=',
+          $http.get('https://api.sphere.io/down-under/products/49a54e18-a3be-4384-a97e-f213da37c1a7/?token=',
           {headers: { Authorization: 'Bearer aFgroaXhmKXnrv8Zgc-78CaGey0dHqlk'}})
           .then(function successCallback(response){
-            $scope.products = response.data.results;
+            $scope.products = response.data;
             console.log(response);
             console.log($scope.products);
 
