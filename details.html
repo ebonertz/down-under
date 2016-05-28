@@ -9,14 +9,14 @@
   <div class="main" ng-controller="DetailsController">
     <div>
         <div class="details container">
-                  <h2 class="details-name"> {{product.name}}</h2>
+                  <h2 class="details-name"> {{product.masterData.current.name.en}}</h2>
             <!-- </div> -->
             <div class="details-list">
                 <p class="item-price"> Price: {{product.masterData.current.masterVariant.value }} </p>
-                <p class="item-image"> Image: <img src="{{product.masterData.current.masterVariant.images}}" height="220" width="220"></p>
+                <p class="item-image"> Image: <img ng-src="{{product.masterData.current.masterVariant.images.url}}" height="220" width="220"></p>
                 <p class="description"> {{product.description}}</p>
                 <p class="details-price">{{product.price}}</p>
             </div>
         </div>
     </div>
-</div>    
+</div>
