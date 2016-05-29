@@ -1,21 +1,20 @@
 <div class="header">
     <div class="container">
       <div class="left-nav">
-        <h1class="header-title"><a href='#/home'> < Back to Product List </a></h1>
+
       </div>
    </div>
 </div>
 
   <div class="main" ng-controller="DetailsController">
-    <div>
         <div class="details container">
+            <a ng-click="clearID()" href='#/home'> Back to Product List </a>
                   <h2 class="details-name"> {{products.masterData.current.name.en}}</h2>
             <!-- </div> -->
             <div class="details-list">
                 <p class="description"> Description: {{products.masterData.current.description.en}}</p>
-                <p class="item-price"> Price: {{products.masterData.current.masterVariant.prices[0].value.centAmount | currency: "€" : -2 }} </p>
-                <p class="item-image"> Image: <img ng-src="{{products.masterData.current.masterVariant.images[0].url}}" height="220" width="220"></p>
+                <p class="item-price"> Price: {{products.masterData.current.masterVariant.prices[0].value.centAmount | currency: "€" : -2 }}.00 </p>
+                <p class="item-image"><img ng-src="{{products.masterData.current.masterVariant.images[0].url}}" height="220" width="220"></p>
             </div>
         </div>
     </div>
-</div>

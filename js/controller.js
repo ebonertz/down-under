@@ -1,23 +1,42 @@
 //Write a controller with and HTTP Request to the commerce tools platform
-
 var projectKey = "down-under";
-var token = "aFgroaXhmKXnrv8Zgc-78CaGey0dHqlk";
+var token = "lCeejUUWBx4wUinsLI481UVixnnFIA7v";
 var baseUrl = "https://api.sphere.io/${projectKey}";
 var tokenHeader = "Authorization: Bearer ${token}";
 
-
-DownUnder.controller('MainController', ['$http', '$scope', function($http, $scope) {
-        var store = this;
-
+DownUnder.controller('MainController', ['$http', '$location', '$scope', function($http, $location, $scope) {
           console.log('MainController ran');
           $http.get('https://api.sphere.io/down-under/products?token=',
-          {headers: { Authorization: 'Bearer aFgroaXhmKXnrv8Zgc-78CaGey0dHqlk'}})
+          {headers: { Authorization: 'Bearer lCeejUUWBx4wUinsLI481UVixnnFIA7v'}})
           .then(function successCallback(response){
             $scope.products = response.data.results;
             console.log(response);
             console.log($scope.products);
+
+                    $scope.saveID = function () {
+                    localStorage.setItem('productID', this.product.id);
+                    $location.path('/details');
+                }
+
+
           });
     }]);
+
+    // var identify = angular.module("identify", ['ngStorage']);
+    //
+    // identity.controller("IdentifierController", function($scope, $localStorage) {
+    //
+    //     // save id to local storage with ng-click function
+    //
+    // });
+        //     $scope.details = function(productId) {
+        //     console.log("product ID function is running");
+        //     this.$scope.products = productId;
+        //     console.log(productID);
+        //
+        //     localStorage.setItem('theEventID', productID);
+        //     $location.path('/details');
+        //   };
 
 //last attemp {headers: {token }}
 

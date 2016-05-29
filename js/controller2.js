@@ -1,19 +1,25 @@
 var projectKey = "down-under";
-var token = "aFgroaXhmKXnrv8Zgc-78CaGey0dHqlk";
+var token = "lCeejUUWBx4wUinsLI481UVixnnFIA7v";
 var baseUrl = "https://api.sphere.io/${projectKey}";
 var tokenHeader = "Authorization: Bearer ${token}";
+theProductId = localStorage.getItem('productID');
 
 
-DownUnder.controller('DetailsController', ['$http', '$scope', function($http, $scope) {
+DownUnder.controller('DetailsController', ['$http', '$location', '$scope', '$route', function($http, $location, $scope, $route) {
           console.log('DetailsController ran');
-          var productID = localStorage.getItem('ID');
-
-          $http.get('https://api.sphere.io/down-under/products/49a54e18-a3be-4384-a97e-f213da37c1a7/?token=',
-          {headers: { Authorization: 'Bearer aFgroaXhmKXnrv8Zgc-78CaGey0dHqlk'}})
+          console.log(theProductId);
+          var theProductId = localStorage.getItem('productID');
+       $http.get('https://api.sphere.io/down-under/products/' + theProductId + '/?token=',
+          {headers: { Authorization: 'Bearer lCeejUUWBx4wUinsLI481UVixnnFIA7v'}})
           .then(function successCallback(response){
             $scope.products = response.data;
             console.log(response);
             console.log($scope.products);
+
+            $scope.clearID = function() {
+                localStorage.setItem('productID', " ");
+                $location.path('/#home');
+            }
 
           });
     }]);

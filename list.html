@@ -9,7 +9,7 @@
   <div class="main" ng-controller="MainController">
 <ul>
       <li ng-repeat="product in products" class="thumbnail">
-        <h2><a href="#/details">{{product.masterData.current.name.en}} </a></h2>
+        <h2><a href="" ng-click="saveID()">{{product.masterData.current.name.en}} </a></h2>
         <p class="description">Description: {{product.masterData.current.description.en}} </p>
       </li>
 </ul>
