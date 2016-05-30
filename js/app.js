@@ -3,11 +3,11 @@ var DownUnder = angular.module("DownUnder", ['ngRoute']);
 DownUnder.config(function($routeProvider) {
   $routeProvider
     .when('/home', {
-      templateUrl: 'list.html',
+      templateUrl: 'views/index.html',
       controller: 'MainController'
     })
     .when('/details', {
-      templateUrl: 'details.html',
+      templateUrl: 'views/details.html',
       controller: 'DetailsController'
     })
     .otherwise({
