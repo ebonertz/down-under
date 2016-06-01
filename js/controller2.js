@@ -1,5 +1,5 @@
 var projectKey = "down-under";
-var token = "yKH8OyILZZZaCkrzdLOjV-_6XGIgDn1Z";
+var token = "d6D9E6-93NqAiEe9nRFb2e0Ie9KaFmD2";
 var baseUrl = "https://api.sphere.io/${projectKey}";
 var tokenHeader = "Authorization: Bearer ${token}";
 theProductId = localStorage.getItem('productID');
@@ -10,7 +10,7 @@ DownUnder.controller('DetailsController', ['$http', '$location', '$scope', '$rou
           console.log(theProductId);
           var theProductId = localStorage.getItem('productID');
        $http.get('https://api.sphere.io/down-under/products/' + theProductId + '/?token=',
-          {headers: { Authorization: 'Bearer yKH8OyILZZZaCkrzdLOjV-_6XGIgDn1Z'}})
+          {headers: { Authorization: 'Bearer d6D9E6-93NqAiEe9nRFb2e0Ie9KaFmD2'}})
           .then(function successCallback(response){
             $scope.products = response.data;
             console.log(response);

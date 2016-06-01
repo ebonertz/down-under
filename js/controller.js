@@ -1,13 +1,13 @@
 //Write a controller with and HTTP Request to the commerce tools platform
 var projectKey = "down-under";
-var token = "yKH8OyILZZZaCkrzdLOjV-_6XGIgDn1Z";
+var token = "d6D9E6-93NqAiEe9nRFb2e0Ie9KaFmD2";
 var baseUrl = "https://api.sphere.io/${projectKey}";
 var tokenHeader = "Authorization: Bearer ${token}";
 
 DownUnder.controller('MainController', ['$http', '$location', '$scope', function($http, $location, $scope) {
           console.log('MainController ran');
           $http.get('https://api.sphere.io/down-under/products?token=',
-          {headers: { Authorization: 'Bearer yKH8OyILZZZaCkrzdLOjV-_6XGIgDn1Z'}})
+          {headers: { Authorization: 'Bearer d6D9E6-93NqAiEe9nRFb2e0Ie9KaFmD2'}})
           .then(function successCallback(response){
             $scope.products = response.data.results;
             console.log(response);
